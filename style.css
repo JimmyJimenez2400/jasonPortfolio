@@ -51,6 +51,8 @@ img {
   width: 100%;
 }
 
+
+
 #main-container {
   flex: 2;
 }
@@ -61,6 +63,11 @@ img {
   width: 100%;
 }
 
+
+#header-container {
+  background-color: white;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -69,18 +76,18 @@ img {
 }
 
 .header .logo {
+  height: 100%;
+  width: 100%;
+}
+
+.header .logo #jason-logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 200px;
 }
 
-.header .logo img {
-  flex: 1;
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-  object-position: bottom;
-}
 
 .header-links {
   width: 100%;
@@ -283,4 +290,56 @@ img {
 
 .contact-container>section {
   flex: 1;
+}
+
+
+/* Logo Animation */
+#Building_1,
+#Building_2 {
+  animation: UpandDown1 2s;
+}
+
+@keyframes UpandDown1 {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#Building_3,
+#Building_4 {
+  animation: UpandDown2 2s;
+}
+
+@keyframes UpandDown2 {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#Beyblade {
+  animation: beyblade 2s;
+}
+
+@keyframes beyblade {
+  0% {
+    transform-origin: top right;
+    transform: rotate(120deg);
+  }
+
+  100% {
+    transform-origin: bottom right;
+    transform: rotate(0deg);
+  }
 }
